@@ -1,0 +1,128 @@
+﻿* {
+    margin: 0px auto;
+}
+
+body {
+    background-color: white;
+    width: 100%;
+    text-align: center;
+}
+
+div.main {
+    width: 100%;
+    height: 100vh;
+    /*alinhando*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+div.login {
+    background-color: #ECECEC;
+    width: 80%;
+    display: flex;
+    border-top-left-radius: 45px;
+    border-top-right-radius: 45px;
+    border-bottom-left-radius: 45px;
+    border-bottom-right-radius: 45px;
+}
+
+div.imgLogin {
+    flex: 0.7;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    text-align: center;
+    background-color: #0C3B88;
+    border-top-left-radius: 45px;
+    border-bottom-left-radius: 45px;
+}
+div.imgLogin2 {
+    flex: 0.2;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    background-color: #0C3B88;
+    border-top-left-radius: 45px;
+    border-bottom-left-radius: 45px;
+}
+
+
+div.areaLogin {
+    flex: 1;
+    
+    display: flex;
+    flex-direction: column;
+   
+}
+
+#setec {
+    width: 100%;
+    text-align:center;
+
+}
+
+
+h1 {
+    font-size: 7vw;
+    font-family: 'Righteous';
+    color: #0C3B88;
+}
+
+#TxtUsuario, #TxtSenha, #TxtEmail, #TxtNovaS, #TxtRepetS {
+    font-size: 1.5vw;
+    border-radius: 10px;
+    font-family: 'Poppins';
+    justify-content: center;
+}
+
+.lbl {
+    font-size: 2.5vw;
+    text-align:initial;
+    flex-direction:row;
+    justify-content:flex-start;
+    font-family: 'Poppins';
+    color: #0C3B88;
+    margin-left:14.3vw;
+}
+
+.button {
+    background-color: none;
+    border: 5px solid #0C3B88;
+    border-radius: 15px;
+    font-size: 3.125vw;
+    font-family: 'Righteous';
+    color: #0C3B88;
+    cursor: pointer;
+}
+a {
+    text-align: left;
+}
+p {
+    text-align: left;
+    font-size: 2vw;
+    font-family: 'Inter', sans-serif;
+    color: #00C2FF;
+   
+}
+#Usuario {
+    font-size: 1.5vw;
+    border-radius: 5px;
+    font-family: 'Poppins';
+    margin-left:14.3vw;
+
+}
+#Label3 {
+    font-size: 2vw;
+    padding: 5px;
+    font-family: 'Inter', sans-serif;
+    color: #7A7A7A;
+    border-radius: 5px;
+}
+#CheckBox1 {
+    font-size: 5vw;
+}
+

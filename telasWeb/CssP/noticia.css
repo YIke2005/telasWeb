@@ -1,0 +1,155 @@
+﻿* {
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+    text-transform: capitalize;
+    text-decoration: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    min-height: 100%;
+    min-width: 100%;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: #0C3B88;
+    box-shadow: 0px 5px 10px rgba(0,0,0,.1);
+    padding: 0px 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+}
+
+    header .logo {
+        flex: 0.25;
+    }
+
+    header .perfil {
+        flex: 0.10;
+    }
+
+    header .logo img {
+        width: 100%;
+    }
+
+    header .perfil img {
+        width: 100%;
+    }
+
+    header .navbar ul {
+        list-style: none;
+        font-family: 'Poppins';
+    }
+
+        header .navbar ul li {
+            position: relative;
+            float: left;
+        }
+
+            header .navbar ul li a {
+                font-size: 20px;
+                padding: 20px;
+                color: white;
+                display: block;
+            }
+
+                header .navbar ul li a:hover {
+                    background-color: white;
+                    color: #0C3B88;
+                }
+
+            header .navbar ul li ul {
+                position: absolute;
+                left: 0;
+                width: 200px;
+                background: #0C3B88;
+                display: none
+            }
+
+                header .navbar ul li ul li {
+                    width: 100%;
+                    border-top: 1px solid rgba(0,0,0,.1);
+                }
+
+            header .navbar ul li:focus-within > ul,
+            header .navbar ul li:hover > ul {
+                display: initial;
+            }
+p4 {
+    font-size: 2vw;
+    font-family: 'Bakbak One';
+    color: white;
+    text-shadow: 0px 10px 10px rgba(0,0,0,.7);
+}
+
+#menu-bar {
+    display: none
+}
+
+header label {
+    flex: 0.1;
+    cursor: pointer;
+    display: none;
+}
+
+    header label img {
+        width: 100%;
+    }
+.imagem {
+ 
+    width: 50vw;
+    height: 50vh;
+}
+.imagem img{
+    width: 100%;
+}
+.noticia {
+    width: 80%;
+    margin-top: 20vh;
+    padding-bottom:10vh;
+}
+.texto{
+    width:100%;
+    margin-top:10vh;
+}
+.paragrafo {
+    width: 100%;
+    margin-top: 5vh;
+}
+h1 {
+    font-size: 8vw;
+    font-family: 'Righteous';
+    text-align: center;
+    font-weight:200;
+}
+p1 {
+    font-size: 2vw;
+    font-family: 'Poppins';
+}
+
+footer {
+    width: 100%;
+    display: flex;
+    background-color: #0C3B88;
+}
+
+.aligator {
+    flex: 0.3;
+}
+
+    .aligator img {
+        width: 50%;
+    }
+
+.vazio {
+    flex: 1;
+}
