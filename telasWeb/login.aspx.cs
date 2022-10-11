@@ -14,6 +14,8 @@ namespace telasWeb
         ClasseConexao conexao;
         DataTable tabela;
 
+
+
         protected void Page_Load(object sender, EventArgs e)
         {
 
@@ -27,6 +29,7 @@ namespace telasWeb
         protected void btnEntrar_Click(object sender, EventArgs e)
         {
             string user = Usuario.SelectedItem.Value;
+            string curriculo = "";
             string name = TxtUsuario.Text.ToString();
             string RM = TxtUsuario.Text.ToString();
             string password = TxtSenha.Text.ToString();
@@ -34,6 +37,8 @@ namespace telasWeb
 
             string codigo = null;
             string comando;
+            
+
             try
             {
                 switch (user)
@@ -41,8 +46,11 @@ namespace telasWeb
                     case "aluno":
                         comando = $"EXEC LoginAlunoRM {RM}";//', '{password}';
                         tabela = conexao.executarSQL(comando);
-                        name = tabela.Rows[0].ToString();
+
+                        name = tabela.Rows[0][1].ToString();
+                        curriculo = tabela.Rows[0][14].ToString();
                         execLogin();
+                       
                         break;
                     case "responsavel":
                         comando = $"EXEC LoginResponsavel '{RM}', '{password}'";
@@ -77,7 +85,8 @@ namespace telasWeb
                 {
                     Session["user"] = user;
                     Session["nome"] = name;
-                    Session["RM"] = RM;
+                    Session["curriculo"] = curriculo;
+                     Session["RM"] = RM;
                     Session["senha"] = password;
                  
                     Response.Redirect("HomeAluno.aspx");

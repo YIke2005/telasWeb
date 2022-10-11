@@ -85,8 +85,10 @@
     <Content Include="cssP\confcss.css" />
     <Content Include="cssP\homeConfig.css" />
     <Content Include="cssP\loginConfig.css" />
+    <Content Include="cssP\masterConfig.css" />
     <Content Include="cssP\noticia.css" />
     <Content Include="cssP\noticias.css" />
+    <Content Include="Img\pencil.png" />
     <Content Include="cssP\perfil.css" />
     <Content Include="esqueciSenha.aspx" />
     <Content Include="HomeAluno.aspx" />
@@ -148,6 +150,13 @@
     <Compile Include="login.aspx.designer.cs">
       <DependentUpon>login.aspx</DependentUpon>
     </Compile>
+    <Compile Include="master.Master.cs">
+      <DependentUpon>master.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="master.Master.designer.cs">
+      <DependentUpon>master.Master</DependentUpon>
+    </Compile>
     <Compile Include="MudarSenha.aspx.cs">
       <DependentUpon>MudarSenha.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -190,6 +199,7 @@
     <Content Include="bootstrap\js\bootstrap.bundle.min.js.map" />
     <Content Include="bootstrap\js\bootstrap.js.map" />
     <Content Include="bootstrap\js\bootstrap.min.js.map" />
+    <Content Include="master.Master" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

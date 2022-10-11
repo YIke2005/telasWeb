@@ -14,7 +14,7 @@ public class ClasseConexao
     {
         try
         {
-            String strConexao = "Password=etesp; Persist Security Info=True; User ID=sa; Initial Catalog=ETESP; Data Source=" + Environment.MachineName + "\\SQLEXPRESS";
+            String strConexao = "Password=etesp; Persist Security Info=True; User ID=sa; Initial Catalog=ETESP; Data Source=" + Environment.MachineName; // + "\\SQLEXPRESS";
             conexao.ConnectionString = strConexao;
             conexao.Open();
             return conexao;

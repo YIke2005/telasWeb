@@ -15,10 +15,10 @@ namespace telasWeb
         protected void Page_Load(object sender, EventArgs e)
         {
 
-
+            string RM = Session["RM"].ToString();
             con = new ClasseConexao();
             ds = new DataSet();
-            ds = con.executa_sql("Select RM, nomeAluno from tblAluno");
+            ds = con.executa_sql("select *, (select materia from tblComponenteCurricular where idComponente="+ RM +") as materia from tblComponenteAluno");
             Boletim.DataSource = ds.Tables[0].DefaultView;
             Boletim.DataBind();
             string sql = "Select SUM(Total) as Total from tblAluno";

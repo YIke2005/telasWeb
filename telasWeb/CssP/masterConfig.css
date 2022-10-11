@@ -1,0 +1,149 @@
+﻿* {
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+    text-transform: capitalize;
+    text-decoration: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    min-height: 100%;
+    min-width: 100%;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: #0C3B88;
+    box-shadow: 0px 5px 10px rgba(0,0,0,.1);
+    padding: 0px 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+}
+
+    header .logo {
+        flex: 0.25;
+    }
+
+    header .perfil {
+        justify-content: space-between;
+        flex: 0.1;
+    }
+
+
+.btnDropdow {
+    display: flex;
+    width: 5rem;
+    justify-content: space-between;
+    flex-direction: row
+}
+
+
+
+
+header .logo img {
+    width: 100%;
+}
+
+#perfil {
+    width: 3.75vw;
+}
+
+header .navbar ul {
+    list-style: none;
+    font-family: 'Poppins';
+}
+
+    header .navbar ul li {
+        position: relative;
+        float: left;
+    }
+
+        header .navbar ul li a {
+            font-size: 20px;
+            padding: 20px;
+            color: white;
+            display: block;
+        }
+
+            header .navbar ul li a:hover {
+                background-color: white;
+                color: #0C3B88;
+            }
+
+        header .navbar ul li ul {
+            position: absolute;
+            left: 0;
+            width: 200px;
+            background: #0C3B88;
+            display: none
+        }
+
+            header .navbar ul li ul li {
+                width: 100%;
+                border-top: 1px solid rgba(0,0,0,.1);
+            }
+
+        header .navbar ul li:focus-within > ul,
+        header .navbar ul li:hover > ul {
+            display: initial;
+        }
+
+
+#menu-bar {
+    display: none
+}
+
+header label {
+    flex: 0.1;
+    cursor: pointer;
+    display: none;
+}
+
+    header label img {
+        width: 100%;
+    }
+
+p4 {
+    font-size: 1.5vw;
+    font-family: 'Poppins';
+    color: white;
+    text-align: center;
+    margin-right: 0px;
+}
+/*Fim do header*/
+
+main {
+    margin-top: 20vh;
+    margin-bottom: 5vh;
+    width: 100%;
+}
+
+/**/
+footer {
+    width: 100%;
+    display: flex;
+    background-color: #0C3B88;
+}
+
+.aligator {
+    padding: 1vw;
+    flex: 0.4;
+}
+
+    .aligator img {
+        padding-left: 1vw;
+        width: 30%;
+    }
+
+.vazio {
+    flex: 1;
+}

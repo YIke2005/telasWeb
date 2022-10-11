@@ -1,119 +1,134 @@
-﻿* {
-    margin: 0 auto;
-    padding: 0;
-    box-sizing: border-box;
-    text-transform: capitalize;
-    text-decoration: none;
-}
-
-a {
-    text-decoration: none;
-}
-
-body {
-    min-height: 100%;
-    min-width: 100%;
-}
-
+﻿
 /*header*/
-header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    background: #0C3B88;
-    box-shadow: 0px 5px 10px rgba(0,0,0,.1);
-    padding: 0px 7%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    z-index: 1000;
-}
 
-    header .logo {
-        flex: 0.25;
-    }
-
-    header .perfil {
-        flex: 0.10;
-    }
-
-    header .logo img {
-        width: 100%;
-    }
-
-    header .perfil img {
-        width: 100%;
-    }
-
-    header .navbar ul {
-        list-style: none;
-        font-family: 'Poppins';
-    }
-
-        header .navbar ul li {
-            position: relative;
-            float: left;
-        }
-
-            header .navbar ul li a {
-                font-size: 20px;
-                padding: 20px;
-                color: white;
-                display: block;
-            }
-
-                header .navbar ul li a:hover {
-                    background-color: white;
-                    color: #0C3B88;
-                }
-
-            header .navbar ul li ul {
-                position: absolute;
-                left: 0;
-                width: 200px;
-                background: #0C3B88;
-                display: none
-            }
-
-                header .navbar ul li ul li {
-                    width: 100%;
-                    border-top: 1px solid rgba(0,0,0,.1);
-                }
-
-            header .navbar ul li:focus-within > ul,
-            header .navbar ul li:hover > ul {
-                display: initial;
-            }
-
-
-#menu-bar {
-    display: none
-}
-
-header label {
-    flex: 0.1;
-    cursor: pointer;
-    display: none;
-}
-
-    header label img {
-        width: 100%;
-    }
-p4 {
-    font-size: 1.5vw;
-    font-family: 'Poppins';
-    color: white;
-    text-shadow: 0px 10px 10px rgba(0,0,0,.7);
-}
 /*Fim do header*/
 
 /* Perfil*/
-main {
-    min-width: 100%;
-    min-height: 100vh;
-    padding: 10vw;
+
+
+.grande {
+    width: 80%;
+   
+    display: flex;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    justify-content: space-between;
+    -webkit-box-flex: 1;
+    background-color: rebeccapurple;
+   
+    
 }
+.sidebar{
+    
+    flex:0.2;
+    display:flex;
+    flex-direction:column;
+    background-color:aqua;
+}
+.account-nav {
+
+    margin:auto;
+    vertical-align:central;
+}
+.nav-item {
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+}
+.aluno {
+    margin-left: 3vw;
+    flex: 1;
+    background-color: crimson;
+    display:grid;
+    grid-template-columns: 65% 33%;
+    grid-gap: 2%;
+}
+.aluno-info, .aluno-foto {
+    margin: 1vw;
+    flex: 1;
+    background-color: chartreuse;
+}
+.card-info {
+    box-sizing: border-box;
+    background-color: #1d222d;
+    box-shadow: 4px 4px 8px #0003;
+    border-radius: 4px;
+    border: 2px solid transparent;
+    cursor: pointer;
+    transition: ease-in-out .2s;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 3.8vh;
+
+}
+.header {
+    padding: 2vw;
+    border-bottom: 1px solid #171b23;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+.profile {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    
+    font: inherit;
+    vertical-align: baseline;
+}
+.titulo {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    margin-left: 2.4vw;
+    width: 80%;
+}
+.mudar {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+    vertical-align: baseline;
+}
+.btn-mudar {
+    background: transparent;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    
+}
+.info {
+    padding: 3vw 0 0;
+    border-top: 2px solid rgba(255,255,255,.05);
+    font-size: 1.5vw;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+
+}
+.detalhe {
+    padding: 1vw;
+    font-family: Chakra Petch,sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 4vh;
+    letter-spacing: .05em;
+    color: #fff;
+    display: flex;
+    align-items: center;
+}
+.um {
+    width: 25%;
+ 
+}
+.value {
+    width: 75%;
+    text-align: right;
+}
+
+/*
 .card-perfil {
     width: 30%;
     border-radius: 20px;
@@ -157,27 +172,6 @@ h1 {
     font-size: 2vw;
     color: white;
 }
+*/
 
 /*Fim do Perfil*/
-
-/*Footer*/
-footer {
-    width: 100%;
-    display: flex;
-    background-color: #0C3B88;
-    bottom:0;
-    left:0;
-}
-
-.aligator {
-    flex: 0.3;
-}
-
-    .aligator img {
-        width: 50%;
-    }
-
-.vazio {
-    flex: 1;
-}
-/*Fim do header*/

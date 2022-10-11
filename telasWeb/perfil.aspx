@@ -1,75 +1,12 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="perfil.aspx.cs" Inherits="telasWeb.perfil" %>
+﻿<%@ Page Language="C#"  MasterPageFile="~/master.Master" AutoEventWireup="true" CodeBehind="perfil.aspx.cs" Inherits="telasWeb.perfil" %>
 
-<!DOCTYPE html>
+<asp:Content id="Content1" ContentPlaceHolderID="head" runat="server">    
+     <link rel="stylesheet" type="text/css" href="cssP/perfil.css">
+   </asp:Content>
+<asp:Content id="Content2" ContentPlaceHolderID="main" runat="server">     
+    <main>
 
-<html xmlns="http://www.w3.org/1999/xhtml" lang="pt-br">
-<head runat="server">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <title>SETEC</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale= 1.0" />
-	<link rel="stylesheet" type="text/css" href="cssP/perfil.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" />
-   <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300&family=Righteous&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com"/>
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-<link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet" />
-  <link href="http://fonts.cdnfonts.com/css/bakbak-one" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Coda&display=swap" rel="stylesheet">
-</head>
-<body>
-    <form id="form1" runat="server">
-        <div>
-            <header>
-            <a href="HomeAluno.aspx" class="logo">
-             <asp:Image ID="setec"  runat="server" ImageUrl="~\Img\Setec Branco.png" />
-            </a>
-
-            <input type="checkbox" id="menu-bar" />
-            <label for="menu-bar"><asp:Image ID="menu"  runat="server" ImageUrl="~\Img\menu.png" /></label>
-
-            <nav class="navbar">
-                
-                <ul>
-                    <li><a href="HomeAluno.aspx">INÍCIO</a></li>
-                    <li><a href="#">ALUNO</a>  
-                        <ul>
-                            <li> <a href="#"> BOLETIM</a></li>
-                        
-                      
-                            <li> <a href="#"> HORÁRIO</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#">MAPA</a>  </li>
-                    <li><a href="#">INFORMAÇÕES</a>
-                        <ul>
-                            <li> <a href="#"> CALENDÁRIO</a></li>
-                        
-                            <li> <a href="#"> PROFESSORES</a></li>
-                       
-                            <li> <a href="#"> ARQUIVOS</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#">MENSAGENS</a>  </li>
-                     
-                </ul>
-              
-            </nav>
-
-                <p4>
-                    <% Response.Write(Session["nome"]); %>
-                 </p4>
-                    <a href="perfil.aspx" class="perfil"> <img src="Img/perfil.png" /></a> 
-               
-        </header>
-              <!--Fim do header-->
-
-            <main>
+        <!--
             <div class="card-perfil">
 
                  <div class="card-img">
@@ -92,9 +29,11 @@
                         </a>
                        <br />
                     <p class="info">
-                        RM:
+                         Nome: <% Response.Write(Session["nome"]); %>
                         <br />
-                        Habilitação:
+                        RM:  <% Response.Write(Session["RM"]); %>
+                        <br />
+                        Habilitação: 
                         <br />
                         Sit. Matrícula: 
                         <br />
@@ -111,19 +50,124 @@
                     </p>
                 </div>
             </div>
-            </main>
+             -->
+        <div class="grande">
+            <div class="sidebar">
+                <nav class="account-nav">
+              
+                    <div class="nav-item">Boletim</div>
+                    <div class="nav-item">Horário</div>
+                    <div class="nav-item">Mapa</div>
+                    <div class="nav-item">Calendário</div>
+                    <div class="nav-item">Professores</div>
+                    <div class="nav-item">Arquivos</div>
+                    <div class="nav-item">Mensagens</div>
 
-
-            <!--Fim do main-->
-              <footer>
-            <div class="aligator">
-                <img src="Img/AligatorLogo Branco.png" />
+                </nav>
             </div>
-            <div class="vazio">
+            <div class="aluno">
+                
+                <div class="aluno-info">
+                    <div class="card-info">
+                        <div class="header">
+                                <div class="profile">
+                                    <img style="width:3vw; height:3vw;" src="Img/perfil.png" />
+                                </div>
+                                <div class="titulo">
+                                    <h2>Minha conta</h2>
+                                </div>
+                                <div class="mudar">
+                                    <button class="btn-mudar" style="text-align:center">
+                                        <img style="width:2vw; height:2vw;" src="Img/pencil.png" />
+                                        <br />
+                                        Mudar Senha
+                                    </button>
+                                </div>
+                            </div>
+                        <div class="info">
+                            <div class="detalhe">
+                                 <span class="1">
+                                    Nome:
+                                 </span>
+                                 <span class="value">
+                                    <% Response.Write(Session["nome"]); %>
+                                 </span>
+                            </div>
+                             <div class="detalhe">
+                                <span class="1">
+                                    RM:
+                                 </span>
+                                 <span class="value">
+                                    <% Response.Write(Session["RM"]); %>
+                                 </span>
+                            </div>
+                             <div class="detalhe">
+                                 <span class="1">
+                                    Habilitação: 
+                                 </span>
+                                 <span class="value">
+                                    
+                                 </span>
+                            </div>
+                             <div class="detalhe">
+                                 <span class="1">
+                                   Sit. Matrícula: 
+                                 </span>
+                                 <span class="value">
+                                   
+                                 </span>
+                            </div>
+                            <div class="detalhe">
+                                  <span class="1">
+                                    Turma:
+                                 </span>
+                                 <span class="value">
+                                   
+                                 </span>
+                            </div>
+                            <div class="detalhe">
+                                  <span class="1">
+                                    Semestre OC:
 
+                                 </span>
+                                 <span class="value">
+                                    
+                                 </span>
+                            </div> 
+                            <div class="detalhe">
+                                   <span class="um">
+                                    Ano OC:
+                                 </span>
+                                 <span class="value">
+                                   
+                                 </span>
+                            </div>   
+                            <div class="detalhe">
+                                  <span class="1">
+                                     Módulo/Série: 
+                                 </span>
+                                 <span class="value">
+                                  
+                                 </span>
+                            </div>    
+                            <div class="detalhe">
+                                  <span class="1">
+                                   Grupo da Divisão:
+                                 </span>
+                                 <span class="value">
+                                   
+                                 </span>
+                            </div> 
+                        </div>
+                    </div>
+                </div>
+                  <div class="aluno-foto">
+                      <div class="card-foto">
+                          
+                    </div>
+                </div>
             </div>
-        </footer>
         </div>
-    </form>
-</body>
-</html>
+            </main>
+          </asp:Content>
+
